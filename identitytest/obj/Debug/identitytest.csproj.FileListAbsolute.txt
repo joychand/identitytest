@@ -38,10 +38,10 @@ E:\test_repo\identitytest\identitytest\bin\System.Net.Http.Formatting.xml
 E:\test_repo\identitytest\identitytest\bin\System.Web.Http.xml
 E:\test_repo\identitytest\identitytest\bin\System.Web.Http.Owin.xml
 E:\test_repo\identitytest\identitytest\bin\Thinktecture.IdentityModel.Core.pdb
-E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.csprojResolveAssemblyReference.cache
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.Migrations.initial_create.resources
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.Migrations.PreAudience.resources
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.Migrations.AudienceTableAdded.resources
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.csproj.GenerateResource.Cache
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.dll
 E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.pdb
+E:\test_repo\identitytest\identitytest\obj\Debug\identitytest.csprojResolveAssemblyReference.cache

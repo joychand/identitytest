@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace identitytest.Controllers
 {
-   // [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("api/roles")]
     public class RolesController : BaseApiController
     {
