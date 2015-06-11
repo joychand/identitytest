@@ -14,7 +14,7 @@ namespace identitytest.Controllers
     [RoutePrefix("api/accounts")]
     public class AccountsController : BaseApiController
     {
-
+    [AllowAnonymous]
         [Route("users")]
         public IHttpActionResult GetUsers()
         {

@@ -14,6 +14,9 @@ using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Optimization;
 
 namespace identitytest
 {
@@ -23,8 +26,13 @@ namespace identitytest
         {
             HttpConfiguration httpConfig = new HttpConfiguration();
             ConfigureOAuthTokenGeneration(app);
+            ConfigureOAuthTokenConsumption(app);
             ConfigureWebApi(httpConfig);
             app.UseWebApi(httpConfig);
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
 
         }
 
@@ -41,7 +49,7 @@ namespace identitytest
                 TokenEndpointPath = new PathString("/oauth/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 Provider = new CustomOAuthProvider(),
-                AccessTokenFormat = new CustomJwtFormat("http://localhost:59822")
+                AccessTokenFormat = new CustomJwtFormat("eSiroi")
             };
 
             // OAuth 2.0 Bearer Access Token Generation
@@ -51,7 +59,7 @@ namespace identitytest
         private void ConfigureOAuthTokenConsumption(IAppBuilder app)
         {
 
-            var issuer = "http://localhost:59822";
+            var issuer = "eSiroi";
             string audienceId = ConfigurationManager.AppSettings["as:AudienceId"];
             byte[] audienceSecret = TextEncodings.Base64Url.Decode(ConfigurationManager.AppSettings["as:AudienceSecret"]);
 
